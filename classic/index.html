@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justina Akua | Web Development Educator</title>
+    <meta name="description" content="Portfolio of Justina Akua, an educator specializing in web development, databases, and related technologies in Accra, Ghana.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-code text-primary"></i> Justina Akua
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#teaching">Teaching Experiences</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn btn-outline dark-mode-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="#contact" class="btn btn-primary">Book a Workshop</a>
+                </div>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section bg-sand">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="hero-subtitle">I am <span class="text-primary">Justina Akua</span></p>
+                    <h1 class="hero-title">Educator + <br>Web & Database Specialist</h1>
+                    <p class="hero-description">
+                        Based in Accra, Ghana. I specialize in teaching hands-on web development, databases, and complementary tech skills. My goal is to empower students to build modern, scalable, and responsive web applications.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#teaching" class="btn btn-primary">Explore Experiences <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <!-- Circle backdrop mirroring the design -->
+                    <div class="image-circle-bg"></div>
+                    <img src="./assets/portrait.png" alt="Justina Akua" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section bg-blue text-white">
+            <div class="container about-container">
+                <div class="about-image-wrapper">
+                    <div class="about-img-box">
+                        <img src="./assets/portrait.png" alt="Justina Akua" class="about-img">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title text-center-mobile">About Me</h2>
+                    <h3 class="about-subtitle">Who Am I?</h3>
+                    <p>
+                        I am an experienced tech educator based in Accra, Ghana, with a passion for simplifying complex technical concepts. Over the years, I have helped hundreds of students transition into tech by teaching foundational to advanced web development and database management skills.
+                    </p>
+                    <p>
+                        My core mission is to bridge the digital skills gap by delivering practical, project-based curriculum that prepares learners for the global tech industry. I thrive in classroom environments, coding bootcamps, and corporate training sessions.
+                    </p>
+
+                    <h3 class="about-subtitle mt-4">Key Stats & Info</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="info-text">
+                                <h4>Students Taught</h4>
+                                <p>300+</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="info-text">
+                                <h4>Courses Specialized</h4>
+                                <p>6 Core Programs</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <p>Accra, Ghana</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="info-text">
+                                <h4>Core Expertise</h4>
+                                <p>MERN Stack & SQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching Experiences / What I Offer -->
+        <section id="teaching" class="teaching section bg-sand">
+            <div class="container text-center">
+                <h2 class="section-title text-primary">Teaching Experiences</h2>
+                <p class="section-description mx-auto">Highlighting six core programs where I've successfully guided students from theory to real-world application building.</p>
+                
+                <div class="services-grid">
+                    <!-- Exp 1 -->
+                    <div class="service-card" onclick="openModal('modal-exp-1')">
+                        <div class="service-icon"><i class="fa-brands fa-html5"></i></div>
+                        <h3 class="service-title">Web Development Fundamentals</h3>
+                        <p class="service-desc">Accra Coding Academy / University of Ghana</p>
+                        <p class="service-date">Jan 2023 – Dec 2024</p>
+                    </div>
+                    <!-- Exp 2 -->
+                    <div class="service-card" onclick="openModal('modal-exp-2')">
+                        <div class="service-icon"><i class="fa-brands fa-react"></i></div>
+                        <h3 class="service-title">Frontend Frameworks Mastery</h3>
+                        <p class="service-desc">Online Bootcamp & Local Workshops</p>
+                        <p class="service-date">Mar 2022 – Jun 2025</p>
+                    </div>
+                    <!-- Exp 3 -->
+                    <div class="service-card" onclick="openModal('modal-exp-3')">
+                        <div class="service-icon"><i class="fa-brands fa-node-js"></i></div>
+                        <h3 class="service-title">Backend Development Node.js</h3>
+                        <p class="service-desc">Ghana Tech Institute</p>
+                        <p class="service-date">Sep 2021 – Present</p>
+                    </div>
+                    <!-- Exp 4 -->
+                    <div class="service-card" onclick="openModal('modal-exp-4')">
+                        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3 class="service-title">Database Design & SQL</h3>
+                        <p class="service-desc">University of Ghana – CS Dept</p>
+                        <p class="service-date">Jan 2020 – Dec 2022</p>
+                    </div>
+                    <!-- Exp 5 -->
+                    <div class="service-card" onclick="openModal('modal-exp-5')">
+                        <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3 class="service-title">NoSQL & Modern Databases</h3>
+                        <p class="service-desc">Freelance Corporate Training</p>
+                        <p class="service-date">Jul 2023 – Present</p>
+                    </div>
+                    <!-- Exp 6 -->
+                    <div class="service-card" onclick="openModal('modal-exp-6')">
+                        <div class="service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <h3 class="service-title">Full-Stack MERN Dev</h3>
+                        <p class="service-desc">Accra Institute of Technology</p>
+                        <p class="service-date">Sep 2022 – Aug 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider mimicking the design's smooth wave/curve -->
+        <div class="wave-divider"></div>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section bg-white">
+            <div class="container text-center">
+                <h2 class="section-title">My Technical <span class="text-primary">Skills</span></h2>
+                <p class="section-description mx-auto">Technologies I teach and utilize in full-stack web development.</p>
+                
+                <div class="skills-wrapper mt-5">
+                    <div class="skill-category">
+                        <h3>Web Development</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="tag"><i class="fa-brands fa-react"></i> React.js</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend & Databases</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag"><i class="fa-solid fa-database"></i> SQL / PostgreSQL</span>
+                            <span class="tag"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Others</h3>
+                        <div class="skill-tags">
+                            <span class="tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                            <span class="tag">Postman</span>
+                            <span class="tag">Vercel / Netlify</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">Debugging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section bg-blue text-white">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title text-white">Let's Work Together</h2>
+                        <p>Looking for an instructor, corporate trainer, or web development consultant in Accra? Get in touch!</p>
+                        
+                        <div class="contact-methods mt-4">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>hello@justinaakua.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>+233 (0) 55 123 4567</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Accra, Ghana</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper bg-white text-dark rounded-xl p-4">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="interest">Course Interest</label>
+                                <select id="interest">
+                                    <option>Web Dev Fundamentals</option>
+                                    <option>Frontend Mastery</option>
+                                    <option>Backend/Node.js</option>
+                                    <option>Database/SQL</option>
+                                    <option>Full-Stack/MERN</option>
+                                    <option>Corporate Training / Workshop</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="How can I help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container text-center">
+            <h3>Justina Akua</h3>
+            <p>Educator | Web Development & Database Specialist</p>
+            <div class="hero-socials footer-socials my-3">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Justina Akua. Made with <i class="fa-solid fa-heart text-danger"></i> in Accra</p>
+        </div>
+    </footer>
+
+    <!-- Modals for Experiences -->
+    <!-- Modal 1 -->
+    <div class="modal" id="modal-exp-1">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-1')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-brands fa-html5 text-primary fa-3x mb-3"></i>
+                <h2>Web Development Fundamentals</h2>
+                <p class="text-muted">Accra Coding Academy / University of Ghana | Jan 2023 – Dec 2024</p>
+            </div>
+            <div class="modal-body">
+                <p>Introduced 80+ beginners to modern web development. Students built fully responsive personal websites from scratch.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>HTML5, CSS3, Flexbox/Grid</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Responsive Design</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div class="modal" id="modal-exp-2">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-2')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-brands fa-react text-primary fa-3x mb-3"></i>
+                <h2>Frontend Frameworks Mastery</h2>
+                <p class="text-muted">Online Bootcamp (Coursera Partner) + Local Workshops | Mar 2022 – Jun 2025</p>
+            </div>
+            <div class="modal-body">
+                <p>Taught advanced frontend development using popular frameworks. Students created interactive dashboards and e-commerce fronts.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>React.js, Next.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>State Management (Redux/Zustand)</li>
+                    <li>Component Architecture</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal" id="modal-exp-3">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-3')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-brands fa-node-js text-primary fa-3x mb-3"></i>
+                <h2>Backend Development with Node.js</h2>
+                <p class="text-muted">Ghana Tech Institute | Sep 2021 – Present</p>
+            </div>
+            <div class="modal-body">
+                <p>Guided students in building scalable server-side applications and RESTful APIs.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>Node.js, Express.js</li>
+                    <li>REST APIs</li>
+                    <li>Authentication (JWT)</li>
+                    <li>Postman testing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal" id="modal-exp-4">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-4')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-database text-primary fa-3x mb-3"></i>
+                <h2>Database Design & SQL Mastery</h2>
+                <p class="text-muted">University of Ghana – Computer Science Department | Jan 2020 – Dec 2022</p>
+            </div>
+            <div class="modal-body">
+                <p>Delivered hands-on database courses where students designed and optimized real-world relational databases.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>SQL, MySQL, PostgreSQL</li>
+                    <li>Database Normalization</li>
+                    <li>Joins, Indexing</li>
+                    <li>Stored Procedures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal" id="modal-exp-5">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-5')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-server text-primary fa-3x mb-3"></i>
+                <h2>NoSQL & Modern Database Applications</h2>
+                <p class="text-muted">Freelance Corporate Training (Accra-based startups) | Jul 2023 – Present</p>
+            </div>
+            <div class="modal-body">
+                <p>Taught non-relational databases integrated with web apps. Students built full CRUD applications with real-time features.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>MongoDB, Firebase</li>
+                    <li>Mongoose ODM</li>
+                    <li>Cloud Firestore</li>
+                    <li>Data Modeling for NoSQL</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal" id="modal-exp-6">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-exp-6')">&times;</span>
+            <div class="modal-header">
+                <i class="fa-solid fa-layer-group text-primary fa-3x mb-3"></i>
+                <h2>Full-Stack Web Application Development (MERN)</h2>
+                <p class="text-muted">Capstone Project Course – Accra Institute of Technology | Sep 2022 – Aug 2024</p>
+            </div>
+            <div class="modal-body">
+                <p>Final-year full-stack course; students completed end-to-end applications deployed to production.</p>
+                <h4>Skills Taught:</h4>
+                <ul class="skills-list">
+                    <li>MERN Stack (MongoDB, Express, React, Node.js)</li>
+                    <li>Deployment (Vercel/Netlify/Heroku)</li>
+                    <li>API Integration</li>
+                    <li>Performance Optimization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for Modals/Menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
